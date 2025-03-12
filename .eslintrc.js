@@ -1,7 +1,16 @@
 module.exports = {
-  // ... your other ESLint config
+  extends: ['next/core-web-vitals'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
+  parserOptions: {
+    project: './tsconfig.json',
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    }
+  },
   rules: {
-    // ... your other rules
     "react/no-unescaped-entities": "off"
   }
-}
+};
