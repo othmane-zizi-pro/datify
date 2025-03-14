@@ -5,29 +5,38 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Musharof Chy",
-    designation: "Founder @TailGrids",
+    name: "Kyle Tymoszewicz",
+    designation: "COO at Integral Treasury",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Othmane played a key role in launching initiatives to automate core processes -- significantly improving our customer invoicing workflow and creating internal tools that would resolve routine customer pain points.",
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
   {
     id: 2,
-    name: "Devid Weilium",
-    designation: "Founder @UIdeck",
+    name: "Chihee Kim",
+    designation: "Cofounder at Finny (acquired by Origin)",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Othmane is a creative and innovative thinker, bringing a much-needed sense of focus and attention across functions. His instincts are keenly attuned to the needs of the business as well as users.",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
   {
     id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
+    name: "Selma Belkhayat",
+    designation: "Managing Director at AMS Africa",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Othmane has made a vital contribution to advancing our technological processes at AMS Africa. He played a key role in establishing our 'Innovation and Technology' department from its earliest stages, shaping its foundation.",
     image: "/images/testimonials/auth-03.png",
+    star: 5,
+  },
+  {
+    id: 4,
+    name: "Ali Mrani",
+    designation: "Cofounder and CEO at AMS Africa",
+    content:
+      "Lorem Ipsum",
+    image: "/images/testimonials/author-01.png",
     star: 5,
   },
 ];
@@ -37,8 +46,8 @@ const Testimonials = () => {
     <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="What Our Users Says"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="What Our Clients Say"
+          paragraph="Hear from the companies and organizations we've worked with about their experience collaborating with us."
           center
         />
 
