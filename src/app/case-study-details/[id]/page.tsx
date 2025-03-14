@@ -1,12 +1,16 @@
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
 import SharePost from "@/components/Blog/SharePost";
 import TagButton from "@/components/Blog/TagButton";
 import caseStudiesData from "@/components/CaseStudies/caseStudiesData";
 import Image from "next/image";
 import Link from "next/link";
-import { Metadata } from "next";
-import { notFound } from "next/navigation";
 
-export const generateMetadata = ({ params }: { params: { id: string } }): Metadata => {
+type Props = {
+  params: { id: string }
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const caseStudyId = parseInt(params.id);
   const caseStudy = caseStudiesData.find((cs) => cs.id === caseStudyId);
   
@@ -21,15 +25,15 @@ export const generateMetadata = ({ params }: { params: { id: string } }): Metada
     title: `${caseStudy.title} | Datify`,
     description: caseStudy.summary,
   };
-};
+}
 
-export const generateStaticParams = () => {
+export function generateStaticParams() {
   return caseStudiesData.map((caseStudy) => ({
     id: caseStudy.id.toString(),
   }));
-};
+}
 
-const CaseStudyDetailsPage = ({ params }: { params: { id: string } }) => {
+export default function CaseStudyDetailsPage({ params }: Props) {
   const caseStudyId = parseInt(params.id);
   const caseStudy = caseStudiesData.find((cs) => cs.id === caseStudyId);
   
@@ -384,6 +388,4 @@ const CaseStudyDetailsPage = ({ params }: { params: { id: string } }) => {
       </section>
     </>
   );
-};
-
-export default CaseStudyDetailsPage; 
+} 
