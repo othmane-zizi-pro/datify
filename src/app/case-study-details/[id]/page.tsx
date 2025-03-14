@@ -6,11 +6,15 @@ import caseStudiesData from "@/components/CaseStudies/caseStudiesData";
 import Image from "next/image";
 import Link from "next/link";
 
-type Props = {
-  params: { id: string }
+interface PageParams {
+  id: string;
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: PageParams 
+}): Promise<Metadata> {
   const caseStudyId = parseInt(params.id);
   const caseStudy = caseStudiesData.find((cs) => cs.id === caseStudyId);
   
@@ -27,13 +31,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export function generateStaticParams() {
+export function generateStaticParams(): Array<{ id: string }> {
   return caseStudiesData.map((caseStudy) => ({
     id: caseStudy.id.toString(),
   }));
 }
 
-export default function CaseStudyDetailsPage({ params }: Props) {
+export default async function CaseStudyDetailsPage({ 
+  params 
+}: { 
+  params: PageParams 
+}) {
   const caseStudyId = parseInt(params.id);
   const caseStudy = caseStudiesData.find((cs) => cs.id === caseStudyId);
   
