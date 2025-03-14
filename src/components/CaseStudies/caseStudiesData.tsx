@@ -3,8 +3,8 @@ import { CaseStudy } from "@/types/caseStudy";
 const caseStudiesData: CaseStudy[] = [
   {
     id: 1,
-    title: "Digital Transformation for Global Retail Chain",
-    summary: "How we helped a major retail chain modernize their digital infrastructure and increase online sales by 150%",
+    title: "Streamlining Billing and Payments for Integral Treasury",
+    summary: "How we helped Integral Treasury streamline their billing and payments process, resulting in a 40% reduction in processing time and a 60% increase in customer satisfaction.",
     challenge: "The client needed to modernize their legacy systems and create a seamless omnichannel experience for customers.",
     solution: "Implemented a modern microservices architecture and developed a new mobile-first e-commerce platform.",
     results: [
@@ -14,15 +14,35 @@ const caseStudiesData: CaseStudy[] = [
     ],
     image: "/images/case-studies/retail-transformation.jpg",
     company: {
-      name: "Global Retail Co",
-      logo: "/images/case-studies/company-logos/retail-co.png",
-      industry: "Retail"
+      name: "Integral Treasury",
+      logo: "/images/case-studies/company-logos/integral-treasury.png",
+      industry: "Crypto"
     },
     tags: ["Digital Transformation", "E-commerce", "Retail"],
-    publishDate: "2024"
+    publishDate: "2025"
   },
   {
     id: 2,
+    title: "Deploying the global version of the Origin Financial app",
+    summary: "How we helped Origin Financial deploy their global version of the app, resulting in a 30% increase in user engagement and a 20% reduction in support requests.",
+    challenge: "The healthcare provider needed a way to analyze patient data securely and derive actionable insights.",
+    solution: "Created a HIPAA-compliant data analytics platform with advanced visualization capabilities.",
+    results: [
+      "30% increase in user engagement",  
+      "20% reduction in support requests",
+      "100% HIPAA compliance maintained"
+    ],
+    image: "/images/case-studies/healthcare-analytics.jpg",
+    company: {
+      name: "Origin Financial",
+      logo: "/images/case-studies/company-logos/origin-financial.png",
+      industry: "FinTech"
+    },
+    tags: ["Healthcare", "Data Analytics", "Security"],
+    publishDate: "2024"
+  },
+  {
+    id: 3,
     title: "AI-Powered Customer Service Platform",
     summary: "Developing an intelligent customer service solution that reduced response times by 80%",
     challenge: "The client was struggling with long customer service response times and increasing support costs.",
@@ -34,15 +54,15 @@ const caseStudiesData: CaseStudy[] = [
     ],
     image: "/images/case-studies/ai-customer-service.jpg",
     company: {
-      name: "TechServe Solutions",
-      logo: "/images/case-studies/company-logos/techserve.png",
-      industry: "Technology"
+      name: "AMS Africa",
+      logo: "/images/case-studies/company-logos/ams-africa.jpeg",
+      industry: "Real Estate"
     },
     tags: ["Artificial Intelligence", "Customer Service", "Technology"],
-    publishDate: "2024"
+    publishDate: "2023"
   },
   {
-    id: 3,
+    id: 4,
     title: "Healthcare Data Analytics Platform",
     summary: "Building a secure and scalable healthcare analytics platform for better patient outcomes",
     challenge: "The healthcare provider needed a way to analyze patient data securely and derive actionable insights.",
@@ -54,9 +74,9 @@ const caseStudiesData: CaseStudy[] = [
     ],
     image: "/images/case-studies/healthcare-analytics.jpg",
     company: {
-      name: "HealthCare Plus",
+      name: "Premian",
       logo: "/images/case-studies/company-logos/healthcare-plus.png",
-      industry: "Healthcare"
+      industry: "AI EdTech"
     },
     tags: ["Healthcare", "Data Analytics", "Security"],
     publishDate: "2024"
