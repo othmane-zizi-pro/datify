@@ -30,15 +30,6 @@ const testimonialData: Testimonial[] = [
     image: "/images/testimonials/selma-bk.jpg",
     star: 5,
   },
-  {
-    id: 4,
-    name: "Ali Mrani",
-    designation: "Cofounder and CEO at Premian",
-    content:
-      "Lorem Ipsum",
-    image: "/images/testimonials/author-01.png",
-    star: 5,
-  },
 ];
 
 const Testimonials = () => {
