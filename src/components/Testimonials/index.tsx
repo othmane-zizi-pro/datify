@@ -9,7 +9,7 @@ const testimonialData: Testimonial[] = [
     designation: "COO at Integral Treasury",
     content:
       "Othmane played a key role in launching initiatives to automate core processes -- significantly improving our customer invoicing workflow and creating internal tools that would resolve routine customer pain points.",
-    image: "/images/testimonials/auth-01.png",
+    image: "/images/testimonials/kyle-tymo.jpeg",
     star: 5,
   },
   {
@@ -18,7 +18,7 @@ const testimonialData: Testimonial[] = [
     designation: "Cofounder at Finny (acquired by Origin)",
     content:
       "Othmane is a creative and innovative thinker, bringing a much-needed sense of focus and attention across functions. His instincts are keenly attuned to the needs of the business as well as users.",
-    image: "/images/testimonials/auth-02.png",
+    image: "/images/testimonials/chihee-kim.jpeg",
     star: 5,
   },
   {
@@ -27,13 +27,13 @@ const testimonialData: Testimonial[] = [
     designation: "Managing Director at AMS Africa",
     content:
       "Othmane has made a vital contribution to advancing our technological processes at AMS Africa. He played a key role in establishing our 'Innovation and Technology' department from its earliest stages, shaping its foundation.",
-    image: "/images/testimonials/auth-03.png",
+    image: "/images/testimonials/selma-bk.jpg",
     star: 5,
   },
   {
     id: 4,
     name: "Ali Mrani",
-    designation: "Cofounder and CEO at AMS Africa",
+    designation: "Cofounder and CEO at Premian",
     content:
       "Lorem Ipsum",
     image: "/images/testimonials/author-01.png",

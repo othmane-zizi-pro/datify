@@ -25,13 +25,6 @@ const menuData: Menu[] = [
     path: "/contact",
     newTab: false,
   },
-
-  {
-    id: 3,
-    title: "Team",
-    path: "/team",
-    newTab: false,
-  },
   {
     id: 5,
     title: "Blog",
@@ -41,21 +34,22 @@ const menuData: Menu[] = [
 
   {
     id: 7,
-    title: "Pages",
+    title: "Team",
     newTab: false,
     submenu: [
+      {
+        id: 42,
+        title: "Team",
+        path: "/team",
+        newTab: false,
+      },
       {
         id: 41,
         title: "About Page",
         path: "/about",
         newTab: false,
       },
-      {
-        id: 42,
-        title: "Team Page",
-        path: "/team",
-        newTab: false,
-      },
+
       {
         id: 43,
         title: "Contact Page",
