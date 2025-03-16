@@ -140,14 +140,29 @@ export default function CaseStudyContent({ id }: CaseStudyContentProps) {
                       Our project delivered exceptional results for {caseStudy.company.name}:
                     </p>
                     <ul className="mt-4 list-inside list-disc text-body-color">
-                      {caseStudy.results.map((result, index) => (
-                        <li 
-                          key={`result-${caseStudy.id}-${index}`}
-                          className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg"
-                        >
-                          {result}
-                        </li>
-                      ))}
+                      {caseStudy.results.map((result, index) => {
+                        if (result.startsWith('!NOBULLET!')) {
+                          // For items with the !NOBULLET! marker, render as a paragraph
+                          return (
+                            <p 
+                              key={`result-${caseStudy.id}-${index}`}
+                              className="mt-4 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg"
+                            >
+                              {result.replace('!NOBULLET! ', '')}
+                            </p>
+                          );
+                        } else {
+                          // For regular items, render as list items with bullets
+                          return (
+                            <li 
+                              key={`result-${caseStudy.id}-${index}`}
+                              className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg"
+                            >
+                              {result}
+                            </li>
+                          );
+                        }
+                      })}
                     </ul>
                     <span className="absolute left-0 top-0 z-[-1]">
                       <svg

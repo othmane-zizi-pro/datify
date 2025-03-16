@@ -62,38 +62,44 @@ const marginParagraph = (text: string) => `<p style="margin-bottom: 2em;">${text
 const caseStudiesData: CaseStudy[] = [
   {
     id: 1,
-    title: "Streamlining Billing and Payments for Integral Treasury",
+    title: "Streamlining Financial Operations for Integral",
     summary: formatText(`
-      How we helped Integral Treasury streamline their billing and payments process, resulting in a 40% reduction in processing time and a 60% 
-      increase in customer satisfaction. 
+      Integral, a fast-growing early-stage startup, faced inefficiencies in their monthly payment reconciliation and overage check processes. 
+      These manual, error-prone tasks consumed days of staff time and risked unnoticed payment discrepancies. At Datify, we 
+      delivered an automated solution using advanced algorithms, database enhancements, and a custom dashboard. The result? Significant time 
+      savings, flawless overage billing, and a leaner, more efficient operation that allowed Integral to focus on their core mission.
     `),
     challenge: formatText(`
-      The client needed to modernize their legacy systems and create a seamless 
-      omnichannel experience for customers. This text will appear on the same line
-      because single line breaks are now converted to spaces.
-      
-      Their existing infrastructure was built on outdated technology that was 
-      becoming increasingly expensive to maintain and couldn't support modern features.
+      Integral's rapid growth brought complexity to their financial operations, creating a tangled web of inefficiencies:\\n
       ${emptyLine}
-      Customer satisfaction was declining as competitors offered more convenient experiences.
+      • <b>Overwhelming Volume:</b> With hundreds of clients, monthly reconciliation and transaction overage checks were chaotic, taking one full-time employee (FTE) multiple days to complete.\\n
+      • <b>Payment Tracking Chaos:</b> Reconciling payments required verifying each client's payment frequency (e.g., annual or monthly) and source (e.g., Stripe, wire, crypto). A centralized spreadsheet compounded the issue, with multiple entries per client due to upsells and new contracts, making it nearly impossible to trace payments to the right agreements.\\n
+      • <b>Disconnected Client Orgs:</b> Many clients had multiple organizations, but there was no way to link these to parent entities—critical for accurate, per-organization overage checks.\\n
+      • <b>Error-Prone and Untrackable:</b> The haphazard process left room for unmade payments to slip through unnoticed, threatening revenue integrity.\\n
+      • <b>Resource Strain:</b> For a startup committed to small, efficient teams, the burden was unsustainable—account managers often worked weekends to keep up.
       
-      To force a line break within a paragraph, use the character explicitly:
-      This text will appear on a new line because of the explicit  character.
-      And this will be on another new line.
+      Integral needed an automated system to reconcile payments, monitor overages, and bill accurately, freeing their team for mission-critical work.
     `),
     solution: formatText(`
-      Implemented a modern microservices architecture and developed a new 
-      mobile-first e-commerce platform.
+      Our agency crafted a comprehensive, tech-driven solution to transform Integral's financial workflows:\\n
+      ${emptyLine}
+      • <b>Org Clustering:</b> We deployed a community-detection algorithm to group sibling orgs by analyzing user email access patterns, establishing a clear client-org hierarchy.\\n
+      • <b>Data Cleanup:</b> We consolidated multiple client entries into unified records, eliminating confusion from redundant data.\\n
+      • <b>Smart Linking:</b> Sibling org groups were matched to client names using name similarity algorithms, with manual checks to ensure precision.\\n
+      • <b>Custom Dashboard:</b> Using Retool, we built an intuitive dashboard to oversee payment reconciliation and overage checks across all clients for any month.\\n
+      • <b>Stripe Integration:</b> We connected the dashboard to the Stripe API, enabling one-click verification of payments (covering 90% of transactions) via customer IDs.\\n
+      • <b>Database Enhancements:</b> We added fields to the SQL database to persistently track reconciliation and overage statuses, fully monitorable from the dashboard.\\n
+      • <b>Quota Automation:</b> We identified quota-related fields, wrote SQL queries to assess quotas for all orgs per client, and updated the database—streamlining overage monitoring and billing.
       
-      Our approach included:\\n
-      • Breaking down the monolithic legacy system into scalable microservices\\n
-      • Developing a responsive, mobile-first platform\\n
-      • Implementing a unified system across all channels
+      The result was a seamless system: with a single button, Integral could reconcile Stripe payments, check overages, and link them to contracts for accurate billing.
+      
+      By partnering with us, Integral turned a chaotic process into a competitive advantage, positioning themselves for scalable growth with a lean, optimized team.
     `),
     results: [
-      "150% increase in online sales",
-      "40% improvement in customer satisfaction",
-      "60% reduction in system maintenance costs"
+      "50 Days Saved Annually: Freed up one FTE's worth of time each year, redirecting effort to strategic priorities.",
+      "Zero Missed Overages: Enabled immediate billing for overages, capturing all revenue without exception.",
+      "12% Error Reduction: Slashed reconciliation mistakes, boosting financial accuracy and trust.",
+      "!NOBULLET! By partnering with us, Integral turned a chaotic process into a competitive advantage, positioning themselves for scalable growth with a lean, optimized team."
     ],
     image: "/images/case-studies/retail-transformation.jpg",
     company: {
