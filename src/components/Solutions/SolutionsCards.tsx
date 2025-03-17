@@ -100,16 +100,17 @@ const servicesData = [
 
 const SolutionsCards = () => {
   const [visibleItems, setVisibleItems] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false);
   
   useEffect(() => {
-    // Animate cards into view one by one with a staggered effect
+    // Initialize all items as visible immediately
+    const allIndices = Array.from({ length: servicesData.length }, (_, i) => i);
+    
+    // Small delay to ensure component is mounted
     const timer = setTimeout(() => {
-      servicesData.forEach((_, index) => {
-        setTimeout(() => {
-          setVisibleItems(prev => [...prev, index]);
-        }, index * 150);
-      });
-    }, 300);
+      setVisibleItems(allIndices);
+      setIsLoaded(true);
+    }, 100);
     
     return () => clearTimeout(timer);
   }, []);
@@ -121,7 +122,7 @@ const SolutionsCards = () => {
           <span className="mb-2 block text-lg font-semibold text-primary">
             Our Services
           </span>
-          <h2 className="mb-3 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl md:text-[45px]">
+          <h2 className="mb-3 text-3xl font-bold leading-tight text-primary sm:text-4xl md:text-[45px]">
             Comprehensive Data Solutions
           </h2>
           <p className="text-base text-body-color dark:text-body-color-dark">
@@ -134,9 +135,7 @@ const SolutionsCards = () => {
             <div 
               key={service.id}
               className={`${service.bgColor} ${service.darkBgColor} transform transition-all duration-500 ease-in-out ${
-                visibleItems.includes(index) 
-                  ? "translate-y-0 opacity-100" 
-                  : "translate-y-8 opacity-0"
+                isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
@@ -147,6 +146,7 @@ const SolutionsCards = () => {
                     alt={service.title} 
                     width={40} 
                     height={40} 
+                    priority={index < 3}
                   />
                 </div>
                 

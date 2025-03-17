@@ -58,33 +58,162 @@ const processSteps = [
 
 const SolutionsProcess = () => {
   const [activeStep, setActiveStep] = useState(1);
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isScrollLocked, setIsScrollLocked] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [scrollTimeout, setScrollTimeout] = useState(null);
+  const sectionRef = useRef(null);
   const timelineRef = useRef(null);
+  const stepRefs = useRef([]);
 
-  // Track scroll position for animations
+  // Initialize refs for each step
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY);
+    stepRefs.current = Array(processSteps.length).fill(null).map((_, i) => stepRefs.current[i] || React.createRef());
+  }, []);
+
+  // Check if section is in viewport
+  useEffect(() => {
+    const checkVisibility = () => {
+      if (sectionRef.current) {
+        const rect = sectionRef.current.getBoundingClientRect();
+        
+        // Check if section is visible
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          setIsVisible(true);
+          
+          // Only lock scrolling when the component is fully in view (top is at or above viewport top)
+          // and we haven't reached step 7 yet
+          if (rect.top <= 0 && activeStep < 7) {
+            setIsScrollLocked(true);
+          } else {
+            setIsScrollLocked(false);
+          }
+        } else {
+          setIsScrollLocked(false);
+        }
+      }
     };
     
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-  
-  // Automatically cycle through steps
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveStep(prev => (prev % processSteps.length) + 1);
-    }, 5000);
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility(); // Check on mount
     
-    return () => clearInterval(interval);
-  }, []);
+    return () => window.removeEventListener('scroll', checkVisibility);
+  }, [activeStep]);
+  
+  // Handle wheel events to control step progression
+  useEffect(() => {
+    const handleWheel = (e) => {
+      if (!isScrollLocked || !isVisible) return;
+      
+      e.preventDefault();
+      
+      // Debounce scroll events
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
+      
+      setScrollTimeout(setTimeout(() => {
+        // Determine scroll direction
+        const scrollingDown = e.deltaY > 0;
+        
+        if (scrollingDown && activeStep < 7) {
+          // Move to next step when scrolling down
+          setActiveStep(prev => Math.min(prev + 1, 7));
+        } else if (!scrollingDown && activeStep > 1) {
+          // Move to previous step when scrolling up
+          setActiveStep(prev => Math.max(prev - 1, 1));
+        }
+        
+        // If we've reached step 7, unlock scrolling
+        if (activeStep >= 6 && scrollingDown) {
+          setIsScrollLocked(false);
+        }
+      }, 150));
+    };
+    
+    // Use passive: false to allow preventDefault
+    window.addEventListener('wheel', handleWheel, { passive: false });
+    
+    return () => {
+      window.removeEventListener('wheel', handleWheel);
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
+    };
+  }, [isScrollLocked, isVisible, activeStep, scrollTimeout]);
+  
+  // Handle touch events for mobile
+  useEffect(() => {
+    let touchStartY = 0;
+    
+    const handleTouchStart = (e) => {
+      touchStartY = e.touches[0].clientY;
+    };
+    
+    const handleTouchMove = (e) => {
+      if (!isScrollLocked || !isVisible) return;
+      
+      const touchY = e.touches[0].clientY;
+      const diff = touchStartY - touchY;
+      
+      // Only prevent default if we're locked and in the section
+      if (Math.abs(diff) > 5) {
+        e.preventDefault();
+        
+        // Debounce touch events
+        if (scrollTimeout) {
+          clearTimeout(scrollTimeout);
+        }
+        
+        setScrollTimeout(setTimeout(() => {
+          const scrollingDown = diff > 0;
+          
+          if (scrollingDown && activeStep < 7) {
+            setActiveStep(prev => Math.min(prev + 1, 7));
+          } else if (!scrollingDown && activeStep > 1) {
+            setActiveStep(prev => Math.max(prev - 1, 1));
+          }
+          
+          // If we've reached step 7, unlock scrolling
+          if (activeStep >= 6 && scrollingDown) {
+            setIsScrollLocked(false);
+          }
+          
+          touchStartY = touchY;
+        }, 150));
+      }
+    };
+    
+    window.addEventListener('touchstart', handleTouchStart);
+    window.addEventListener('touchmove', handleTouchMove, { passive: false });
+    
+    return () => {
+      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchmove', handleTouchMove);
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
+    };
+  }, [isScrollLocked, isVisible, activeStep, scrollTimeout]);
+  
+  const handleStepClick = (stepId) => {
+    setActiveStep(stepId);
+    
+    // If clicking on step 7, unlock scrolling
+    if (stepId >= 7) {
+      setIsScrollLocked(false);
+    }
+  };
   
   // Calculate progress percentage for timeline
   const progressPercentage = ((activeStep - 1) / (processSteps.length - 1)) * 100;
 
   return (
-    <section id="process" className="py-20 dark:bg-dark">
+    <section 
+      id="process" 
+      ref={sectionRef}
+      className={`py-20 dark:bg-dark ${isScrollLocked ? 'scroll-lock' : ''}`}
+    >
       <div className="container">
         <div className="mx-auto mb-16 max-w-[590px] text-center">
           <span className="mb-2 block text-lg font-semibold text-primary">
@@ -115,23 +244,38 @@ const SolutionsProcess = () => {
             
             {/* Timeline steps */}
             <div className="relative mt-[-8px] flex justify-between">
-              {processSteps.map((step) => (
-                <button
-                  key={step.id}
-                  onClick={() => setActiveStep(step.id)}
-                  className={`relative z-10 flex h-4 w-4 items-center justify-center rounded-full transition-all ${
-                    step.id <= activeStep ? step.color : "bg-[#E7E7E7] dark:bg-dark-3"
-                  }`}
-                >
-                  <span 
-                    className={`absolute -top-10 transform -translate-x-1/2 whitespace-nowrap text-sm font-medium transition-all ${
-                      step.id === activeStep ? "text-primary opacity-100 scale-110" : "text-body-color opacity-70 scale-100"
+              {processSteps.map((step) => {
+                // Determine text color based on step status
+                const textColorClass = step.id === activeStep 
+                  ? "text-primary opacity-100 scale-110" 
+                  : step.id < activeStep 
+                    ? "text-primary opacity-80 scale-100" 
+                    : "text-body-color opacity-70 scale-100";
+                
+                return (
+                  <button
+                    key={step.id}
+                    ref={el => {
+                      if (el) stepRefs.current[step.id - 1] = el;
+                    }}
+                    onClick={() => handleStepClick(step.id)}
+                    className={`relative z-10 flex h-4 w-4 items-center justify-center rounded-full transition-all ${
+                      step.id <= activeStep ? step.color : "bg-[#E7E7E7] dark:bg-dark-3"
                     }`}
                   >
-                    {step.title}
-                  </span>
-                </button>
-              ))}
+                    <span 
+                      className={`absolute -top-10 transform -translate-x-1/2 whitespace-nowrap text-sm font-medium transition-all ${textColorClass}`}
+                    >
+                      {step.title}
+                    </span>
+                    
+                    {/* Add step number inside the bubble */}
+                    <span className={`text-[10px] font-bold ${step.id <= activeStep ? 'text-white' : 'text-gray-600 dark:text-gray-300'}`}>
+                      {step.id}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
           </div>
           
@@ -153,7 +297,7 @@ const SolutionsProcess = () => {
             </div>
             
             <div className="md:col-span-3">
-              <h3 className={`mb-4 text-2xl font-bold ${processSteps[activeStep - 1].color.replace('bg-', 'text-')}`}>
+              <h3 className="mb-4 text-2xl font-bold text-primary">
                 {activeStep}. {processSteps[activeStep - 1].title}
               </h3>
               <p className="mb-6 text-body-color dark:text-body-color-dark">
@@ -170,7 +314,13 @@ const SolutionsProcess = () => {
                   </svg>
                 </button>
                 <button 
-                  onClick={() => setActiveStep(prev => Math.min(prev + 1, processSteps.length))}
+                  onClick={() => {
+                    const newStep = Math.min(activeStep + 1, processSteps.length);
+                    setActiveStep(newStep);
+                    if (newStep >= 7) {
+                      setIsScrollLocked(false);
+                    }
+                  }}
                   disabled={activeStep === processSteps.length}
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-primary bg-opacity-10 text-primary transition hover:bg-opacity-20 disabled:opacity-40"
                 >
@@ -198,6 +348,18 @@ const SolutionsProcess = () => {
           </div>
         </div>
       </div>
+      
+      {/* Add global style for scroll locking */}
+      <style jsx global>{`
+        body {
+          overflow: ${isScrollLocked ? 'hidden' : 'auto'};
+        }
+        
+        .scroll-lock {
+          position: relative;
+          z-index: 50;
+        }
+      `}</style>
     </section>
   );
 };
