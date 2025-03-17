@@ -505,6 +505,11 @@ const MethodologyProcess = () => {
           </div>
         </div>
       </div>
+      
+      {/* Spacer for last step expanded details */}
+      {expandedStep === processSteps.length && (
+        <div className="hidden lg:block h-[500px]"></div>
+      )}
     </section>
   );
 };
