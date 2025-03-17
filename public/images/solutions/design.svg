@@ -1,0 +1,17 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="64" cy="64" r="64" fill="#EEFBF4"/>
+  <path d="M40 40H88V88H40V40Z" fill="#33C381" fill-opacity="0.1"/>
+  <path d="M40 40H64V64H40V40Z" fill="#33C381" fill-opacity="0.2"/>
+  <path d="M64 40H88V64H64V40Z" fill="#33C381" fill-opacity="0.3"/>
+  <path d="M40 64H64V88H40V64Z" fill="#33C381" fill-opacity="0.4"/>
+  <path d="M64 64H88V88H64V64Z" fill="#33C381" fill-opacity="0.5"/>
+  <circle cx="64" cy="64" r="4" fill="#33C381"/>
+  <path d="M64 32V40" stroke="#33C381" stroke-width="2" stroke-linecap="round"/>
+  <path d="M64 88V96" stroke="#33C381" stroke-width="2" stroke-linecap="round"/>
+  <path d="M96 64H88" stroke="#33C381" stroke-width="2" stroke-linecap="round"/>
+  <path d="M40 64H32" stroke="#33C381" stroke-width="2" stroke-linecap="round"/>
+  <path d="M85.6569 42.3431L80 48" stroke="#33C381" stroke-width="2" stroke-linecap="round"/>
+  <path d="M48 80L42.3431 85.6569" stroke="#33C381" stroke-width="2" stroke-linecap="round"/>
+  <path d="M85.6569 85.6569L80 80" stroke="#33C381" stroke-width="2" stroke-linecap="round"/>
+  <path d="M48 48L42.3431 42.3431" stroke="#33C381" stroke-width="2" stroke-linecap="round"/>
+</svg> 

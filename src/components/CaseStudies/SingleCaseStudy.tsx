@@ -6,7 +6,7 @@ const SingleCaseStudy = ({ caseStudy }: { caseStudy: CaseStudy }) => {
   const { id, title, summary, image, company, tags, publishDate } = caseStudy;
   return (
     <>
-      <div className="group relative overflow-hidden rounded-lg bg-white shadow-one duration-300 hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark">
+      <div className="group relative flex flex-col h-full overflow-hidden rounded-lg bg-white shadow-one duration-300 hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark">
         <Link
           href={`/case-study-details/${id}`}
           className="relative block aspect-[37/22] w-full"
@@ -16,7 +16,7 @@ const SingleCaseStudy = ({ caseStudy }: { caseStudy: CaseStudy }) => {
           </span>
           <Image src={image} alt={title} fill className="object-cover" />
         </Link>
-        <div className="p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
+        <div className="p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8 flex flex-col flex-grow">
           <div className="mb-5 flex items-center">
             <div className="mr-5 flex items-center border-r border-body-color border-opacity-10 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5">
               <div className="mr-4">
@@ -46,10 +46,12 @@ const SingleCaseStudy = ({ caseStudy }: { caseStudy: CaseStudy }) => {
               {title}
             </Link>
           </h3>
-          <p className="mb-6 border-b border-body-color border-opacity-10 pb-6 text-base font-medium text-body-color dark:border-white dark:border-opacity-10">
-            {summary}
-          </p>
-          <div className="flex flex-wrap gap-2">
+          <div className="mb-6 border-b border-body-color border-opacity-10 pb-6 flex-grow dark:border-white dark:border-opacity-10">
+            <p className="text-base font-medium text-body-color line-clamp-4">
+              {summary}
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-2 mt-auto">
             {tags.map((tag, index) => (
               <span
                 key={index}

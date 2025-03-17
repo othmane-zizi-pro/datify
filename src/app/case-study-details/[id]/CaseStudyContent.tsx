@@ -137,7 +137,7 @@ export default function CaseStudyContent({ id }: CaseStudyContentProps) {
                   </h3>
                   <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
                     <p className="text-center text-base font-medium text-body-color">
-                      Our project delivered exceptional results for {caseStudy.company.name}:
+                      {caseStudy.resultsHeading || `Our project delivered exceptional results for ${caseStudy.company.name}:`}
                     </p>
                     <ul className="mt-4 list-inside list-disc text-body-color">
                       {caseStudy.results.map((result, index) => {

@@ -1,0 +1,75 @@
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="500" height="500" fill="#151D48"/>
+  
+  <!-- Grid Lines -->
+  <path d="M50 50H450" stroke="#2A2D45" stroke-width="1"/>
+  <path d="M50 100H450" stroke="#2A2D45" stroke-width="1"/>
+  <path d="M50 150H450" stroke="#2A2D45" stroke-width="1"/>
+  <path d="M50 200H450" stroke="#2A2D45" stroke-width="1"/>
+  <path d="M50 250H450" stroke="#2A2D45" stroke-width="1"/>
+  <path d="M50 300H450" stroke="#2A2D45" stroke-width="1"/>
+  <path d="M50 350H450" stroke="#2A2D45" stroke-width="1"/>
+  <path d="M50 400H450" stroke="#2A2D45" stroke-width="1"/>
+  <path d="M50 450H450" stroke="#2A2D45" stroke-width="1"/>
+  
+  <path d="M50 50V450" stroke="#2A2D45" stroke-width="1"/>
+  <path d="M100 50V450" stroke="#2A2D45" stroke-width="1"/>
+  <path d="M150 50V450" stroke="#2A2D45" stroke-width="1"/>
+  <path d="M200 50V450" stroke="#2A2D45" stroke-width="1"/>
+  <path d="M250 50V450" stroke="#2A2D45" stroke-width="1"/>
+  <path d="M300 50V450" stroke="#2A2D45" stroke-width="1"/>
+  <path d="M350 50V450" stroke="#2A2D45" stroke-width="1"/>
+  <path d="M400 50V450" stroke="#2A2D45" stroke-width="1"/>
+  <path d="M450 50V450" stroke="#2A2D45" stroke-width="1"/>
+  
+  <!-- Main Chart Components -->
+  <!-- Line Chart -->
+  <path d="M50 350L100 320L150 340L200 280L250 260L300 220L350 230L400 180L450 150" stroke="#3056D3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Data Points -->
+  <circle cx="50" cy="350" r="6" fill="#3056D3"/>
+  <circle cx="100" cy="320" r="6" fill="#3056D3"/>
+  <circle cx="150" cy="340" r="6" fill="#3056D3"/>
+  <circle cx="200" cy="280" r="6" fill="#3056D3"/>
+  <circle cx="250" cy="260" r="6" fill="#3056D3"/>
+  <circle cx="300" cy="220" r="6" fill="#3056D3"/>
+  <circle cx="350" cy="230" r="6" fill="#3056D3"/>
+  <circle cx="400" cy="180" r="6" fill="#3056D3"/>
+  <circle cx="450" cy="150" r="6" fill="#3056D3"/>
+  
+  <!-- Bar Chart -->
+  <rect x="80" y="370" width="40" height="80" rx="4" fill="#3056D3" fill-opacity="0.3"/>
+  <rect x="130" y="390" width="40" height="60" rx="4" fill="#3056D3" fill-opacity="0.3"/>
+  <rect x="180" y="350" width="40" height="100" rx="4" fill="#3056D3" fill-opacity="0.3"/>
+  <rect x="230" y="370" width="40" height="80" rx="4" fill="#3056D3" fill-opacity="0.3"/>
+  <rect x="280" y="330" width="40" height="120" rx="4" fill="#3056D3" fill-opacity="0.3"/>
+  <rect x="330" y="310" width="40" height="140" rx="4" fill="#3056D3" fill-opacity="0.3"/>
+  <rect x="380" y="350" width="40" height="100" rx="4" fill="#3056D3" fill-opacity="0.3"/>
+  
+  <!-- Pie Chart -->
+  <path d="M400 120C400 136.569 386.569 150 370 150C353.431 150 340 136.569 340 120C340 103.431 353.431 90 370 90C386.569 90 400 103.431 400 120Z" fill="#3056D3" fill-opacity="0.8"/>
+  <path d="M370 90C386.569 90 400 103.431 400 120H370V90Z" fill="#3056D3"/>
+  <path d="M370 90V120H340C340 103.431 353.431 90 370 90Z" fill="#F59E0B"/>
+  
+  <!-- Decorative Elements -->
+  <rect x="70" y="70" width="130" height="70" rx="8" fill="#3056D3" fill-opacity="0.2"/>
+  <rect x="80" y="90" width="80" height="8" rx="4" fill="#3056D3" fill-opacity="0.6"/>
+  <rect x="80" y="110" width="110" height="8" rx="4" fill="#3056D3" fill-opacity="0.6"/>
+  
+  <rect x="220" y="70" width="130" height="70" rx="8" fill="#3056D3" fill-opacity="0.2"/>
+  <rect x="230" y="90" width="80" height="8" rx="4" fill="#3056D3" fill-opacity="0.6"/>
+  <rect x="230" y="110" width="110" height="8" rx="4" fill="#3056D3" fill-opacity="0.6"/>
+  
+  <!-- Scatter Plot -->
+  <circle cx="120" cy="200" r="5" fill="#F59E0B"/>
+  <circle cx="150" cy="180" r="5" fill="#F59E0B"/>
+  <circle cx="180" cy="220" r="5" fill="#F59E0B"/>
+  <circle cx="210" cy="190" r="5" fill="#F59E0B"/>
+  <circle cx="240" cy="210" r="5" fill="#F59E0B"/>
+  <circle cx="270" cy="180" r="5" fill="#F59E0B"/>
+  <circle cx="130" cy="230" r="5" fill="#F59E0B"/>
+  <circle cx="160" cy="210" r="5" fill="#F59E0B"/>
+  <circle cx="190" cy="190" r="5" fill="#F59E0B"/>
+  <circle cx="220" cy="230" r="5" fill="#F59E0B"/>
+</svg> 

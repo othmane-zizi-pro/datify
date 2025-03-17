@@ -11,6 +11,7 @@ export type CaseStudy = {
   challenge: string;
   solution: string;
   results: string[];
+  resultsHeading?: string;
   image: string;
   company: Company;
   tags: string[];
