@@ -112,7 +112,29 @@ const caseStudiesData: CaseStudy[] = [
     publishDate: "2025"
   },
   {
-    id: 2,
+    "id": 2,
+    "title": "Data Platform for Real Estate Consulting",
+    "summary": "AMS Africa, a specialized real estate consulting firm operating exclusively in the African market, faced significant challenges in reusing valuable market research data from past projects. Consultants struggled to systematically access and leverage data from previous deliverables, leading to wasted time, duplicated efforts, and missed opportunities for cross-pollination of insights. We developed a centralized data platform that organizes and stores data, leverages an LLM for seamless data retrieval, and automates presentation slide creation, transforming their operations. This solution reduced data collection time by 75%, increased deliverable efficiency by 60%, and ensured 100% reusability of data across all projects, empowering consultants to focus on strategic analysis.",
+    "challenge": "AMS Africa encountered critical obstacles in maximizing the value of their extensive market research data:\n\n- <b>Reliance on Memory for Data Reuse:</b> The firm depended on managers to spontaneously recall similarities between current and past contracts, which was unreliable and inconsistent. This often resulted in missed opportunities to leverage existing data.\n- <b>Vague Data Sourcing:</b> Even when past data was identified, it lacked precise sourcing details (e.g., referencing an organization but not the specific report), making it unusable for future projects and forcing consultants to start from scratch.\n- <b>Time-Intensive Market Research:</b> Market research, which formed the foundation of deliverables, consumed over 80% of project time. Of this, 80% was spent on data collection, 15% on formatting slides, and only 5% on strategic analysis—highlighting a severe imbalance in resource allocation.\n\nThese challenges not only delayed project timelines but also prevented the firm from fully capitalizing on its accumulated expertise, undermining its ability to deliver timely, data-driven insights to clients.",
+    "solution": "To address these challenges, we designed and implemented a comprehensive solution tailored to AMS Africa's needs:\n\n- <b>Centralized Data Platform:</b> We created a user-friendly app that consolidates all market research data into a single, easily accessible repository. Consultants can quickly search, visualize, and download pre-formatted slides for client deliverables, eliminating the need to recreate work from scratch.\n- <b>LLM-Powered Data Retrieval:</b> We programmed a Large Language Model (LLM) into the platform, enabling consultants to retrieve data effortlessly using natural language queries (e.g., 'Find residential supply data for Lagos from 2022'). The LLM interprets these requests, locates precise data points, and delivers them instantly, enhancing accessibility and reducing search time.\n- <b>Automation of Recurring Tasks:</b> Recognizing that market research often involves collecting similar data points across various asset classes (e.g., residential, retail, hospitality, leisure, industrial, offices), the platform automates data collection and slide generation. This ensures that once data is inputted, it can be reused indefinitely without duplication of effort.\n- <b>Incentivized Data Input:</b> To encourage consultants to contribute data to the platform, we developed automation features that make it faster to generate slides through the system than manually. In a fast-paced environment with multiple concurrent contracts and competing priorities, this aligns the platform with consultants' immediate needs—completing deliverables efficiently—ensuring widespread adoption.\n\nThis solution not only streamlined operations but also fostered a culture of knowledge sharing, ensuring that every piece of data collected contributes to the firm’s collective expertise and future success.",
+    "results": [
+      "75% reduction in data collection time, freeing consultants to focus on analysis",
+      "60% increase in deliverable efficiency, accelerating project timelines",
+      "100% data reusability across contracts, eliminating redundant efforts",
+      "!NOBULLET! The platform’s impact extended beyond operational metrics, contributing to a 30% increase in client satisfaction and a 25% rise in repeat business. Unburdened by data collection taking up most of their productive time, consultants delivered more insightful and timely recommendations."
+    ],
+    "resultsHeading": "The centralized data platform delivered transformative results:",
+    image: "/images/case-studies/ai-customer-service.jpg",
+    company: {
+      name: "AMS Africa",
+      logo: "/images/case-studies/company-logos/ams-africa.jpeg",
+      industry: "Real Estate"
+    },
+    tags: ["Artificial Intelligence", "Consulting", "Real Estate"],
+    publishDate: "2023"
+  },
+  {
+    id: 3,
     title: "Deploying the global version of the Origin Financial app",
     summary: formatText(`
       Origin Financial needed to expand their financial wellness platform globally to serve multinational clients across different regions. 
@@ -161,57 +183,6 @@ const caseStudiesData: CaseStudy[] = [
     },
     tags: ["Global Expansion", "FinTech", "Localization"],
     publishDate: "2024"
-  },
-  {
-    id: 3,
-    title: "AI-Powered Customer Service Platform",
-    summary: formatText(`
-      AMS Africa, a rapidly expanding real estate firm, struggled with an overwhelming volume of customer inquiries that threatened their reputation for exceptional service. 
-      Their manual support processes couldn't scale with their growth, resulting in delayed responses and inconsistent customer experiences. 
-      We developed an AI-powered customer service platform that intelligently prioritized inquiries, automated common requests, and provided agents with real-time property information. 
-      This transformed their customer experience, reducing response times by 80% while handling 3x the inquiry volume with the same team size.
-    `),
-    challenge: formatText(`
-      AMS Africa faced critical customer service challenges as they expanded across multiple African markets:\\n
-      ${emptyLine}
-      • <b>Overwhelming Inquiry Volume:</b> Their support team was drowning in over 2,500 daily inquiries across email, WhatsApp, SMS, and phone channels, with no unified system to manage them all.\\n
-      • <b>Multi-Language Requirements:</b> Their customer base communicated in 6 different languages, but support agents weren't always available for each language, creating delays and miscommunications.\\n
-      • <b>Complex Property Questions:</b> Agents needed to reference multiple systems and databases to answer specific questions about properties, increasing handling time and error rates.\\n
-      • <b>Inconsistent Response Quality:</b> With rapid team growth and high turnover, maintaining consistent service quality and accurate information became increasingly difficult.\\n
-      • <b>After-Hours Support Gaps:</b> Property inquiries often came outside business hours, especially from international clients, but staffing 24/7 support was cost-prohibitive.
-      
-      These challenges created a growing backlog of unanswered inquiries, extending average response times to 32 hours—unacceptable in the competitive real estate market where prompt responses directly impact sales conversion rates.
-    `),
-    solution: formatText(`
-      We built a comprehensive AI-powered customer service platform tailored to AMS Africa's unique real estate business needs:\\n
-      ${emptyLine}
-      • <b>Unified Omnichannel Interface:</b> We created a single platform that consolidated all communication channels—email, WhatsApp, SMS, phone calls, and social media—into one interface with unified customer histories.\\n
-      • <b>Advanced NLP Engine:</b> We implemented natural language processing in all 6 required languages to accurately classify inquiry types, detect sentiment, and extract key property information from customer messages.\\n
-      • <b>Intelligent Routing System:</b> Our algorithm prioritized inquiries based on urgency, sentiment, customer history, and property value, ensuring the most important conversations received immediate attention.\\n
-      • <b>Automated Response System:</b> For common inquiries like property availability, pricing, and amenities, the system generated accurate responses automatically, handling 65% of all inquiries without agent intervention.\\n
-      • <b>Real-Time Knowledge Base:</b> We integrated their property database, CRM, and transaction systems to provide agents with instant access to all relevant information in a single view.\\n
-      • <b>24/7 Conversational AI:</b> For after-hours support, we deployed an advanced conversational AI that could answer detailed property questions, schedule viewings, and even begin qualification processes.
-      
-      The platform included comprehensive analytics that identified trends, emerging issues, and opportunities for further automation. We also provided a continuous learning system that improved response accuracy over time.
-      
-      By transforming their customer service operations, AMS Africa turned a potential weakness into a significant competitive advantage in the African real estate market.
-    `),
-    results: [
-      "80% reduction in average response time (from 32 hours to just 6.4 hours)",
-      "65% of inquiries successfully handled by AI without human intervention",
-      "300% increase in inquiry handling capacity without adding staff",
-      "95% customer satisfaction rating, up from 72% before implementation",
-      "!NOBULLET! The transformation of AMS Africa's customer service operations contributed to a 43% increase in property viewing bookings and a 28% higher conversion rate from inquiry to sale, directly impacting the company's bottom line while significantly reducing operational costs."
-    ],
-    resultsHeading: "Our AI-powered platform transformed customer service metrics:",
-    image: "/images/case-studies/ai-customer-service.jpg",
-    company: {
-      name: "AMS Africa",
-      logo: "/images/case-studies/company-logos/ams-africa.jpeg",
-      industry: "Real Estate"
-    },
-    tags: ["Artificial Intelligence", "Customer Service", "Real Estate"],
-    publishDate: "2023"
   },
   {
     id: 4,
