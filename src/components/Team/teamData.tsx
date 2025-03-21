@@ -35,21 +35,20 @@ const teamData: TeamMember[] = [
     ],
     accomplishments: [
       {
-        title: "Led Digital Transformation for Major Retail Chain",
-        description: "Successfully led a team that modernized legacy systems for a retail client, resulting in a 150% increase in online sales.",
+        title: "Financial Operations Automation for Crypto Startup",
+        description: "Designed and implemented a custom payment reconciliation system with advanced algorithms that saved 50 days of work annually and eliminated revenue leakage from missed overages.",
         year: "2023"
       },
       {
-        title: "Developed AI-Powered Customer Service Platform",
-        description: "Created an innovative AI solution that reduced response times by 80% and significantly improved customer satisfaction.",
+        title: "AI-Powered Data Platform for Real Estate Consulting",
+        description: "Developed a centralized platform with LLM-powered retrieval that reduced data collection time by 75% and increased deliverable efficiency by 60%, leading to a 30% boost in client satisfaction.",
         year: "2022"
       },
       {
-        title: "Healthcare Data Analytics Platform",
-        description: "Built a HIPAA-compliant analytics platform that improved patient outcomes by 30% through better data insights.",
+        title: "Geospatial Analysis System for Retail Development",
+        description: "Created a precision geospatial solution using Mapbox and GeoPandas that improved population accuracy by 75% and reduced analysis time from three days to just two hours.",
         year: "2021"
       },
-
     ]
   }
 ];
