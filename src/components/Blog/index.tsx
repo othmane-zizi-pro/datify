@@ -1,6 +1,7 @@
 import SectionTitle from "../Common/SectionTitle";
 import SingleBlog from "./SingleBlog";
 import blogData from "./blogData";
+import Link from "next/link";
 
 const Blog = () => {
   // Sort blog posts by date (most recent first) and take the latest 3
@@ -32,6 +33,15 @@ const Blog = () => {
               <SingleBlog blog={blog} />
             </div>
           ))}
+        </div>
+
+        <div className="flex justify-center mt-12">
+          <Link
+            href="/blog"
+            className="rounded-md bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+          >
+            View All Blog Posts
+          </Link>
         </div>
       </div>
     </section>

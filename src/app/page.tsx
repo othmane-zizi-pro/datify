@@ -5,11 +5,12 @@ import ScrollUp from "@/components/Common/ScrollUp";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import Testimonials from "@/components/Testimonials";
+import LatestCaseStudies from "@/components/CaseStudies/LatestCaseStudies";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Datify - Free Next.js Template for Startup and SaaS",
-  description: "This is Home for Startup Nextjs Template",
+  title: "Datify",
+  description: "Software solutions for your business",
   // other metadata
 };
 
@@ -22,6 +23,7 @@ export default function Home() {
       <Brands />
       <AboutSectionOne />
       <Testimonials />
+      <LatestCaseStudies />
       <Blog />
     </>
   );
