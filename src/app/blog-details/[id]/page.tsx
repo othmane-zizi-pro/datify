@@ -51,18 +51,15 @@ export default function BlogDetailsPage({ params }: Props) {
                   <div className="flex flex-wrap items-center">
                     <div className="mb-5 mr-10 flex items-center">
                       <div className="mr-4">
-                        <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                          <Image
-                            src={author.image}
-                            alt={author.name}
-                            fill
-                          />
+                        <div className="relative h-10 w-10 flex items-center justify-center rounded-md bg-primary/10 text-primary font-bold text-lg">
+                          {author.name.charAt(0)}
                         </div>
                       </div>
                       <div className="w-full">
-                        <span className="mb-1 text-base font-medium text-body-color">
-                          By <span>{author.name}</span>
-                        </span>
+                        <h4 className="mb-1 text-base font-bold text-primary">
+                          {author.name}
+                        </h4>
+                        <p className="text-xs text-body-color dark:text-body-color-dark">{author.designation}</p>
                       </div>
                     </div>
                     <div className="mb-5 flex items-center">
@@ -118,11 +115,11 @@ export default function BlogDetailsPage({ params }: Props) {
                   </p>
                   
                   <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
-                    Key Insights from {author.name}
+                    Key Insights from Our Team
                   </h3>
                   
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    As a {author.designation}, {author.name} brings a unique perspective to this topic. The article explores several important aspects of {tags.join(" and ")} that are critical for modern development.
+                    At Datify, we're dedicated to providing valuable insights on {tags.join(" and ")}. Our team of experts has analyzed the latest trends and technologies to bring you practical knowledge you can apply to your projects.
                   </p>
                   
                   <div className="items-center justify-between sm:flex">

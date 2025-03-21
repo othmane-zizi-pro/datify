@@ -33,13 +33,13 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
           <div className="flex items-center mt-auto">
             <div className="mr-5 flex items-center border-r border-body-color border-opacity-10 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5">
               <div className="mr-4">
-                <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                  <Image src={author.image} alt="author" fill />
+                <div className="relative h-8 w-8 flex items-center justify-center rounded-md bg-primary/10 text-primary font-bold text-sm">
+                  {author.name.charAt(0)}
                 </div>
               </div>
               <div className="w-full">
-                <h4 className="mb-1 text-sm font-medium text-dark dark:text-white">
-                  By {author.name}
+                <h4 className="mb-1 text-sm font-bold text-primary">
+                  {author.name}
                 </h4>
                 <p className="text-xs text-body-color">{author.designation}</p>
               </div>

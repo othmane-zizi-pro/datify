@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 // Define number of posts per page
-const POSTS_PER_PAGE = 6;
+const POSTS_PER_PAGE = 3;
 
 type Props = {
   searchParams: {
