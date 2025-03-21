@@ -54,11 +54,7 @@ const teamData: TeamMember[] = [
         description: "Built a HIPAA-compliant analytics platform that improved patient outcomes by 30% through better data insights.",
         year: "2021"
       },
-      {
-        title: "Industry Recognition",
-        description: "Named one of the Top 50 Tech Innovators by [Industry Publication] for contributions to digital transformation.",
-        year: "2023"
-      }
+
     ]
   }
 ];

@@ -3,45 +3,45 @@ import { Blog } from "@/types/blog";
 const blogData: Blog[] = [
   {
     id: 1,
-    title: "Best UI components for modern websites",
+    title: "Understanding Modern JavaScript: Promises, Async/Await and Beyond",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "Dive into the evolution of asynchronous programming in JavaScript, from callback hell to the elegant patterns of Promises and Async/Await. Learn practical applications and performance considerations.",
     image: "/images/blog/blog-01.jpg",
     author: {
-      name: "Samuyl Joshi",
+      name: "Alex Johnson",
       image: "/images/blog/author-01.png",
-      designation: "Graphic Designer",
+      designation: "Senior JavaScript Developer",
     },
-    tags: ["creative"],
-    publishDate: "2025",
+    tags: ["javascript", "programming"],
+    publishDate: "2023",
   },
   {
     id: 2,
-    title: "9 simple ways to improve your design skills",
+    title: "Demystifying WebAssembly: The Future of Web Performance",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "Explore how WebAssembly is revolutionizing web application performance by allowing developers to run code at near-native speed. Learn about its use cases, ecosystem, and how it complements JavaScript.",
     image: "/images/blog/blog-02.jpg",
     author: {
-      name: "Musharof Chy",
+      name: "Maria Chen",
       image: "/images/blog/author-02.png",
-      designation: "Content Writer",
+      designation: "Systems Architect",
     },
-    tags: ["computer"],
-    publishDate: "2025",
+    tags: ["webassembly", "performance"],
+    publishDate: "2023",
   },
   {
     id: 3,
-    title: "Tips to quickly improve your coding speed.",
+    title: "The Architecture Behind Modern AI Frameworks",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "A technical exploration of the architectural patterns that power today's leading AI frameworks. Understand the trade-offs between performance, flexibility, and developer experience in TensorFlow, PyTorch, and JAX.",
     image: "/images/blog/blog-03.jpg",
     author: {
-      name: "Lethium Deo",
+      name: "David Kumar",
       image: "/images/blog/author-03.png",
-      designation: "Graphic Designer",
+      designation: "ML Engineer",
     },
-    tags: ["design"],
-    publishDate: "2025",
+    tags: ["ai", "machine-learning"],
+    publishDate: "2023",
   },
 ];
 export default blogData;
