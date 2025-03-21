@@ -27,14 +27,14 @@ const teamData: TeamMember[] = [
     education: [
       {
         degree: "Master of Management in Analytics",
-        institution: "McGill University Desautels Faculty of Management",
+        institution: "McGill University — Desautels Faculty of Management",
       },
       {
         degree: "IBM Full Stack Developer - Professional Certificate",
         institution: "International Business Machines Corporation",
       },
       {
-        degree: "Bachelor of Science in Business",
+        degree: "Bachelor of Science",
         institution: "Minerva University",
       },
     ],

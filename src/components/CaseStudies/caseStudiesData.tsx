@@ -124,7 +124,7 @@ const caseStudiesData: CaseStudy[] = [
       "!NOBULLET! The platform’s impact extended beyond operational metrics, contributing to a 30% increase in client satisfaction and a 25% rise in repeat business. Unburdened by data collection taking up most of their productive time, consultants delivered more insightful and timely recommendations."
     ],
     "resultsHeading": "The centralized data platform delivered transformative results:",
-    image: "/images/case-studies/ai-customer-service.jpg",
+    image: "/images/case-studies/real-estate-platform.jpg",
     company: {
       name: "AMS Africa",
       logo: "/images/case-studies/company-logos/ams-africa.jpeg",
@@ -134,107 +134,28 @@ const caseStudiesData: CaseStudy[] = [
     publishDate: "2023"
   },
   {
-    id: 3,
-    title: "Deploying the global version of the Origin Financial app",
-    summary: formatText(`
-      Origin Financial needed to expand their financial wellness platform globally to serve multinational clients across different regions. 
-      The challenge? Complex regulatory requirements, language barriers, and regional payment methods threatened to delay their market entry. 
-      At Datify, we developed a scalable localization strategy and built a flexible architecture that enabled rapid deployment across 15 countries. 
-      The result was a 30% increase in user engagement and significant growth in their enterprise client base.
-    `),
-    challenge: formatText(`
-      Origin Financial faced significant hurdles in their global expansion, requiring a comprehensive technical solution:\\n
-      ${emptyLine}
-      • <b>Regulatory Complexity:</b> Each target market had distinct financial regulations and compliance requirements, demanding region-specific features and security protocols.\\n
-      • <b>Language & Cultural Barriers:</b> The app needed to function seamlessly in 8 different languages while maintaining cultural relevance and delivering a consistent user experience.\\n
-      • <b>Payment Method Fragmentation:</b> Regional payment preferences varied dramatically, from credit cards and bank transfers to local digital wallets and alternative payment methods.\\n
-      • <b>Data Sovereignty Requirements:</b> Strict data residency laws in certain regions required a complete rethinking of their database architecture and server deployment strategy.\\n
-      • <b>Performance Across Regions:</b> Serving users across continents raised concerns about latency and app performance, especially in regions with less robust internet infrastructure.
-      
-      Origin Financial needed a partner who could solve these technical challenges while maintaining their aggressive market entry timeline to stay ahead of competitors.
-    `),
-    solution: formatText(`
-      Our team engineered a comprehensive globalization strategy that addressed each challenge while maintaining Origin's signature user experience:\\n
-      ${emptyLine}
-      • <b>Modular Compliance Framework:</b> We developed a flexible regulatory engine that could be configured for each region's specific requirements, enabling rapid deployment without code rewrites.\\n
-      • <b>Advanced Localization Architecture:</b> Beyond simple translations, we built a system that adapted content, financial advice, and UI elements based on cultural norms and regional financial practices.\\n
-      • <b>Unified Payment Gateway:</b> We created a payment orchestration layer that abstracted away the complexity of different payment methods while maintaining PCI compliance across all regions.\\n
-      • <b>Distributed Data Architecture:</b> We implemented a hybrid cloud approach with regional data centers to satisfy data sovereignty requirements while maintaining data consistency and security.\\n
-      • <b>Global CDN Implementation:</b> A distributed content delivery network ensured fast load times and responsive experiences regardless of user location.\\n
-      • <b>Automated Compliance Testing:</b> We built automated testing pipelines that verified regional compliance requirements were met with each new feature release.
-      
-      The result was a truly global platform that felt local to each user, combining the scalability needed for worldwide operations with the personalized experience Origin Financial was known for.
-      
-      By partnering with us, Origin was able to enter key markets months ahead of schedule, capturing significant market share before competitors could respond.
-    `),
-    results: [
-      "Successful deployment in 15 countries within 6 months",
-      "30% increase in user engagement across all regions",
-      "42% growth in enterprise client base",
-      "95% regulatory compliance rating from independent auditors",
-      "!NOBULLET! The global infrastructure we built enabled Origin Financial to scale from serving 50,000 users to over 2 million users worldwide, establishing them as the market leader in financial wellness technology."
+    "id": 6,
+    "title": "Geospatial Technology for Accurate Retail Demand Analysis",
+    "summary": "Our client, a real estate consulting firm, faced challenges in accurately quantifying demand for retail developments. Their outdated methods led to imprecise catchment area definitions, subjective population estimates, and inefficient data management. We implemented a solution using the Mapbox isochrone API and GeoPandas to create precise catchment areas and automate population calculations. This transformation reduced analysis time by 93%, improved population accuracy by 75%, and ensured 100% reusability of hard data across projects. Our solution empowered the client to deliver more accurate and timely insights to their clients and financial partners.",
+    "challenge": "The client encountered several critical obstacles in their demand analysis process:\n\n- <b>Inaccurate Catchment Area Mapping:</b> Analysts used manual methods to draw catchment areas in PowerPoint, leading to imprecise isochrones that didn’t reflect actual travel times.\n- <b>Subjective Population Estimates:</b> Population calculations relied on visual guesses of administrative unit overlaps, introducing significant errors.\n- <b>Complex and Time-Consuming Process:</b> The manual workflow was difficult to teach and took three days per project, limiting scalability.\n- <b>Data Repurposing Difficulties:</b> Valuable data was stored in nonstandard formats with unclear sourcing, making it hard to reuse for future projects.\n\nThese issues compromised the quality of insights and hindered the firm’s ability to meet client expectations efficiently.",
+    "solution": "To address these challenges, we developed a comprehensive, technology-driven solution:\n\n- <b>Precise Catchment Area Definition:</b> We utilized the Mapbox isochrone API to generate accurate catchment areas based on real travel times by car, divided into three proximity levels with modulated capture rates.\n- <b>Automated Population Calculation:</b> Using GeoPandas, we calculated the exact population within each catchment area by determining the overlap between administrative units and isochrones.\n- <b>Standardized Data Management:</b> We stored data in JSON format, linking coordinate-defined shapes to population and socioprofessional category (SPC) data for easy reuse.\n- <b>Automated Reporting and Deliverables:</b> We developed tools to automatically generate comprehensive reports and professionally formatted slides, eliminating manual formatting efforts.\n\nThis solution not only enhanced accuracy but also significantly reduced the time and effort required for each project.",
+    "results": [
+      "93% reduction in analysis time, from three days to two hours",
+      "75% improvement in population accuracy within catchment areas",
+      "100% reusability of hard data across projects"
     ],
-    resultsHeading: "Our global deployment strategy achieved remarkable results:",
-    image: "/images/case-studies/healthcare-analytics.jpg",
+    "resultsHeading": "Our innovative approach delivered remarkable improvements:",
+    image: "/images/case-studies/catchment-areas.jpg",
     company: {
-      name: "Origin Financial",
-      logo: "/images/case-studies/company-logos/origin-financial.png",
-      industry: "FinTech"
+      name: "AMS Africa",
+      logo: "/images/case-studies/company-logos/ams-africa.jpeg",
+      industry: "Real Estate"
     },
-    tags: ["Global Expansion", "FinTech", "Localization"],
-    publishDate: "2024"
+    tags: ["Artificial Intelligence", "Consulting", "Real Estate"],
+    publishDate: "2023"
   },
-  {
-    id: 4,
-    title: "Healthcare Data Analytics Platform",
-    summary: formatText(`
-      Premian, an innovative AI-powered education technology company, wanted to expand into healthcare education but lacked the specialized analytics capabilities needed for medical training data. 
-      They needed a platform that could analyze student performance in high-stakes medical simulations while providing actionable insights for educators and administrators. 
-      We built a secure, HIPAA-compliant analytics platform that processed complex simulation data, identified knowledge gaps, and predicted student success rates on medical licensing exams. 
-      The result was a 30% improvement in student outcomes and a successful entry into the competitive healthcare education market.
-    `),
-    challenge: formatText(`
-      Premian faced significant obstacles entering the healthcare education sector with their existing EdTech platform:\\n
-      ${emptyLine}
-      • <b>Complex Medical Data:</b> Healthcare training involves complex scenarios, procedural simulations, and diagnostic challenges that their existing analytics engine wasn't designed to evaluate effectively.\\n
-      • <b>Regulatory Compliance:</b> Medical education data contains sensitive information requiring strict HIPAA compliance and specialized security protocols their current platform lacked.\\n
-      • <b>Predictive Gaps:</b> Medical educators needed predictive insights about which students might struggle with specific clinical concepts or licensing exam components—capabilities beyond their system's design.\\n
-      • <b>Integration Challenges:</b> Medical schools used specialized simulation hardware and software that needed to feed data into a unified analytics system without disrupting existing workflows.\\n
-      • <b>Multi-dimensional Assessment:</b> Unlike traditional education, medical training requires evaluating knowledge, decision-making, technical skills, and interpersonal abilities simultaneously.
-      
-      Without solving these challenges, Premian risked missing a critical market opportunity and losing ground to competitors already developing specialized medical education analytics. They needed a healthcare-specific analytics solution within six months to secure partnerships with key medical schools.
-    `),
-    solution: formatText(`
-      We architected a comprehensive healthcare-specific analytics platform that addressed Premian's unique challenges:\\n
-      ${emptyLine}
-      • <b>Medical Context Engine:</b> We developed specialized algorithms that understood clinical contexts, medical terminology, and procedure-based assessments essential for healthcare education.\\n
-      • <b>HIPAA-Compliant Architecture:</b> We implemented end-to-end encryption, comprehensive access controls, and detailed audit trails to ensure complete regulatory compliance while maintaining data utility.\\n
-      • <b>Predictive Success Modeling:</b> Our machine learning system analyzed patterns across thousands of past student performances to identify early indicators of potential struggles with specific medical concepts or licensing exam components.\\n
-      • <b>Universal Integration Framework:</b> We built flexible APIs and connectors that seamlessly integrated with 15+ medical simulation systems, electronic health record training environments, and virtual patient platforms.\\n
-      • <b>Multi-factor Evaluation System:</b> Our platform assessed technical knowledge alongside decision quality, procedural execution, and simulated patient interactions to provide a holistic view of student capabilities.\\n
-      • <b>Educator Insight Dashboard:</b> We created intuitive visualizations that helped medical educators quickly identify knowledge gaps, track cohort progress, and generate evidence-based curriculum improvements.
-      
-      The platform incorporated adaptive learning technologies that personalized educational paths based on individual performance data, accelerating the development of critical medical competencies.
-      
-      Through our partnership, Premian successfully entered the healthcare education market with a differentiated analytics solution that addressed the unique needs of medical educators and students.
-    `),
-    results: [
-      "30% improvement in student outcomes on medical licensing examinations",
-      "50% reduction in time educators spent analyzing student performance",
-      "85% of students received personalized learning recommendations that improved their weakest areas",
-      "Successful partnerships with 12 leading medical schools in the first year",
-      "!NOBULLET! Premian's healthcare analytics platform became their fastest-growing product line, increasing company revenue by 42% year-over-year and establishing them as an innovation leader in the specialized medical education technology sector."
-    ],
-    resultsHeading: "Our healthcare analytics solution improved education outcomes:",
-    image: "/images/case-studies/healthcare-analytics.jpg",
-    company: {
-      name: "Premian",
-      logo: "/images/case-studies/company-logos/healthcare-plus.png",
-      industry: "AI EdTech"
-    },
-    tags: ["Healthcare Education", "Data Analytics", "AI"],
-    publishDate: "2024"
-  }
+
+ 
 ];
 
 export default caseStudiesData; 
