@@ -15,10 +15,10 @@ const Hero = () => {
                 Tech Consulting for Startups & SMBs
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                At Datify, we empower tech startups and small-to-medium businesses with cutting-edge software solutions. 
-                Our consulting expertise enhances both mission-critical operations and support functions, ensuring your business runs 
-                smarter and scales faster. Our customized strategies and implementations 
-                deliver measurable results. Partner with Datify to optimize your technology and achieve your goals.
+                At Datify, we provide consulting and implementation of software solutions tailored for SMEs and tech startups. 
+                Our expertise streamlines your mission-critical operations and support functions, helping your business operate more 
+                efficiently and grow rapidly. Through customized strategies and seamless software implementations, we deliver tangible outcomes. 
+                Collaborate with Datify to enhance your technology and reach your objectives.
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
