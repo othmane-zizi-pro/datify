@@ -200,6 +200,69 @@ const caseStudiesData: CaseStudy[] = [
     tags: ["Automation", "Content Marketing", "Lead Generation", "AI/ML", "HubSpot", "Zapier"],
     publishDate: "2024-03-15"
   },
+  {
+    id: 5,
+    title: "AI-Suggested Customer Support Responses for Integral Treasury",
+    summary: formatText(`
+      Integral, a crypto SaaS provider, struggled with slow customer support response times, impacting client satisfaction and team morale. 
+      Their support team was overwhelmed, spending hours crafting responses to repetitive queries. At Datify, we implemented an AI-driven 
+      solution that leveraged their existing documentation and integrated an LLM-powered support chat tool. The result? Drastically reduced 
+      response times, happier customers, and a support team empowered to focus on complex issues—all while maintaining a personal touch.
+    `),
+    challenge: formatText(`
+      Integral had built a loyal customer base with their innovative SaaS platform, but their rapid growth exposed critical inefficiencies 
+      in their customer support operations:\\n
+      ${emptyLine}
+      • <b>Delayed Responses:</b> With a growing user base, the support team took an average of 4 hours to respond to customer inquiries, 
+      leading to frustration and a 10% drop in customer satisfaction scores.\\n
+      • <b>Repetitive Queries:</b> Over 70% of support tickets were repetitive, involving basic troubleshooting or feature-related questions 
+      already covered in their documentation—but the team lacked a quick way to access and utilize this information.\\n
+      • <b>Overworked Team:</b> The small support team of two dedicated agents was stretched thin, often working late to clear ticket backlogs, 
+      which led to burnout and high turnover.\\n
+      • <b>Inconsistent Responses:</b> Without a centralized knowledge base integration, agents often provided inconsistent answers, 
+      risking brand credibility.\\n
+      • <b>Missed Opportunities:</b> Slow response times meant missed opportunities to upsell or cross-sell during customer interactions, 
+      stunting revenue growth.\\n
+      ${emptyLine}
+      Integral needed a scalable, AI-driven solution to streamline their support process, reduce response times, and empower their team 
+      to focus on high-value interactions—all while maintaining the personalized service their customers expected.
+    `),
+    solution: formatText(`
+      We designed a robust, AI-powered system to revolutionize Integral's customer support workflow, integrating seamlessly with their existing tools:\\n
+      ${emptyLine}
+      • <b>Documentation Scraping & Categorization:</b> We developed a Python script to scrape every page of Integral's extensive documentation, 
+      extracting content and metadata. The script output an Excel sheet with each page's URL and an AI-assigned label, matching the category 
+      labels used in their support chat tool (e.g., "Billing," "Troubleshooting," "Feature Requests").\\n
+      • <b>LLM-Powered Contextual Responses:</b> We integrated the categorized documentation into their support chat tool, enabling it to 
+      natively query a large language model (LLM) with the right context. When a customer submitted a query, the tool automatically identified 
+      the relevant category, pulled the appropriate documentation, and suggested a tailored response in seconds.\\n
+      • <b>Agent-Friendly Interface:</b> We built a custom dashboard within the support tool, allowing agents to review AI-suggested responses, 
+      edit them for tone, and send them with a single click.\\n
+      • <b>Continuous Learning:</b> The system was designed to learn from agent edits, refining its suggestions over time to better align with 
+      Integral's brand voice and customer expectations.\\n
+      • <b>Integration with Existing Tools:</b> We connected the solution to Integral's CRM ticketing system (Plain), ensuring seamless tracking 
+      of customer interactions and enabling agents to identify upsell opportunities during support conversations.\\n
+      ${emptyLine}
+      The result was a game-changing system: Integral's support team could now respond to customer inquiries in under 2 minutes, with AI-suggested 
+      responses that were accurate, on-brand, and contextually relevant. This freed agents to focus on complex issues and relationship-building, 
+      transforming support into a strategic asset.
+    `),
+    results: [
+      "80% Faster Responses: Reduced average response time from 4 hours to under 2 minutes, boosting customer satisfaction scores by 15%.",
+      "40% Increase in Agent Productivity: Freed up agents to handle 40% more tickets daily, eliminating backlogs and reducing overtime.",
+      "5% Revenue Growth: Enabled agents to identify and act on upsell opportunities during support interactions, driving a 5% increase in monthly recurring revenue.",
+      "!NOBULLET! By partnering with Datify, Integral Treasury turned their customer support from a bottleneck into a competitive advantage, delighting customers and empowering their team to focus on what matters most—building lasting relationships."
+    ],
+    resultsHeading: "Our AI-driven solution delivered transformative outcomes for Integral Innovations:",
+    image: "/images/case-studies/customer-support.jpg",
+    company: {
+      name: "Integral Treasury",
+      logo: "/images/case-studies/company-logos/integral-treasury.png",
+      industry: "Crypto"
+    },
+    tags: ["AI-Driven Support", "Customer Service", "Automation", "AI/ML"],
+    publishDate: "2025"
+  },
 ];
 
 export default caseStudiesData; 
