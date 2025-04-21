@@ -9,7 +9,7 @@ const Portfolio = () => {
     <>
       <Breadcrumb
         pageName="Portfolio"
-        description="Check out some of the apps and tools we've built."
+        description="Check out some of the public apps and tools we've built."
       />
 
       <section className="pb-[120px] pt-[70px]">
@@ -40,7 +40,7 @@ const Portfolio = () => {
                     className="mb-4 inline-block text-xl font-bold text-black hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                     target="_blank"
                   >
-                    Easy Habit Tracker
+                    [B2C] Easy Habit Tracker
                   </Link>
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color">
