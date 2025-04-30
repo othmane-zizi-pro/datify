@@ -60,7 +60,7 @@ const Portfolio = () => {
                       className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-base font-medium text-white hover:bg-opacity-90 hover:shadow-lg"
                       target={item.link.startsWith('http') ? '_blank' : undefined}
                     >
-                      {item.link.startsWith('http') ? 'View on App Store' : 'View Project'}
+                      {item.buttonText}
                       <span className="pl-2">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M15.8334 10.0001H4.16675M15.8334 10.0001L11.6667 5.83341M15.8334 10.0001L11.6667 14.1667" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>

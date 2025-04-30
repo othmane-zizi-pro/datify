@@ -10,12 +10,13 @@ interface PortfolioItem {
   client: string;
   role: string;
   features: string[];
+  buttonText: string;
 }
 
 export const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
-    title: "[B2C] Easy Habit Tracker",
+    title: "Easy Habit Tracker",
     description: "A simple, clean habit tracking app that helps users build better habits. Features include streak tracking, personalized insights, and an intuitive interface.",
     image: "/images/portfolio/easy-habit-tracker.png",
     link: "https://apps.apple.com/app/easy-habit-tracker/id6744540714",
@@ -30,7 +31,8 @@ export const portfolioItems: PortfolioItem[] = [
       "Intuitive and clean user interface",
       "Data persistence with Core Data",
       "App Store distribution"
-    ]
+    ],
+    buttonText: "View on App Store"
   },
   {
     id: 3,
@@ -49,6 +51,7 @@ export const portfolioItems: PortfolioItem[] = [
       "Population coverage metrics",
       "Customizable analysis parameters",
       "Export and reporting tools"
-    ]
+    ],
+    buttonText: "View Project"
   }
 ]; 
