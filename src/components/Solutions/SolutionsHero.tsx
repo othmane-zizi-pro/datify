@@ -87,7 +87,7 @@ const SolutionsHero = () => {
                   style={{ transitionDelay: '500ms' }}
                 >
                   <h2 className="mb-3 text-2xl font-bold leading-tight text-black dark:text-white">
-                    <CountUp end={200} duration={2} />+
+                    <CountUp end={100} duration={2} />+
                   </h2>
                   <p className="mb-0 text-base font-medium text-body-color">
                     Projects delivered
