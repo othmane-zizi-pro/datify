@@ -14,6 +14,7 @@ export type Education = {
   degree: string;
   institution: string;
   year?: string;
+  description?: string;
 };
 
 export type TeamMember = {

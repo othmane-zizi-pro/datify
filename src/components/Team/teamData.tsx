@@ -21,16 +21,19 @@ const teamData: TeamMember[] = [
     ],
     education: [
       {
-        degree: "Master of Management in Analytics",
+        degree: "Master of Management in Analytics (MMA)",
         institution: "McGill University — Desautels Faculty of Management",
+        description: "The McGill Master of Management (MMA) has been ranked #2 in Canada (QS 2024 Masters in Business Analytics)."
       },
       {
         degree: "IBM Full Stack Developer - Professional Certificate",
         institution: "International Business Machines Corporation",
+        description: "Professional certification covering modern web development, cloud computing, database systems, and AI."
       },
       {
-        degree: "Bachelor of Science",
+        degree: "Bachelor of Science in Business (BSc.)",
         institution: "Minerva University",
+        description: "Minerva University, based in San Francisco, has been ranked the #1 most innovative university in the world (WURI Ranking 2025)."
       },
     ],
     accomplishments: [

@@ -132,6 +132,11 @@ const TeamPage = () => {
                           <p className="text-base text-body-color">
                             {edu.institution}
                           </p>
+                          {edu.description && (
+                            <p className="mt-2 text-sm text-body-color">
+                              {edu.description}
+                            </p>
+                          )}
                         </div>
                       </div>
                     </div>
