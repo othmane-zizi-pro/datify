@@ -23,7 +23,7 @@ const teamData: TeamMember[] = [
       {
         degree: "Master of Management in Analytics (MMA)",
         institution: "McGill University — Desautels Faculty of Management",
-        description: "The McGill Master of Management (MMA) has been ranked #2 in Canada (QS 2024 Masters in Business Analytics)."
+        description: "The McGill Master of Management (MMA) has been ranked #1 in Canada for alumni outcomes (QS 2025 Masters in Business Analytics)."
       },
       {
         degree: "IBM Full Stack Developer - Professional Certificate",
