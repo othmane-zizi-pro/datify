@@ -2,6 +2,13 @@ import { Brand } from "@/types/brand";
 
 const brandsData: Brand[] = [
   {
+    id: 4,
+    name: "CAE",
+    href: "https://www.cae.com/",
+    image: "/images/brands/cae.svg",
+    imageLight: "/images/brands/cae-light.svg",
+  },
+  {
     id: 6,
     name: "Integral Treasury",
     href: "https://integral.xyz/",

@@ -15,7 +15,7 @@ export default function PricingPage() {
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3 mt-12">
           <PricingBox
             packageName="Essentials"
-            price="45"
+            price="125"
             duration="hr"
             subtitle="Ideal for focused projects: get expert help on dashboards, reporting, or workflow automation."
           >
@@ -29,7 +29,7 @@ export default function PricingPage() {
           </PricingBox>
           <PricingBox
             packageName="Automation & AI"
-            price="65"
+            price="175"
             duration="hr"
             subtitle="For teams ready to automate, optimize, and leverage AI for business growth."
           >
@@ -43,8 +43,8 @@ export default function PricingPage() {
           </PricingBox>
           <PricingBox
             packageName="Enterprise Transformation"
-            price="75"
-            duration="hr"
+            price="Custom"
+            duration=""
             subtitle="For organizations seeking end-to-end digital transformation and ongoing partnership."
           >
             <OfferList text="All Automation & AI features" status="active" />

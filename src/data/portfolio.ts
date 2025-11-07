@@ -33,25 +33,5 @@ export const portfolioItems: PortfolioItem[] = [
       "App Store distribution"
     ],
     buttonText: "View on App Store"
-  },
-  {
-    id: 3,
-    title: "IsoKron",
-    description: "A powerful tool for analyzing and visualizing catchment areas. Our platform helps businesses, researchers, and urban planners understand population coverage.",
-    image: "/images/portfolio/isokron.png",
-    link: "https://isokron-project.vercel.app/",
-    category: "Web Application",
-    technologies: ["TypeScript", "Next.js", "Mapbox"],
-    date: "2024",
-    client: "IsoKron",
-    role: "Full Stack Developer",
-    features: [
-      "Interactive map visualization",
-      "Catchment area analysis",
-      "Population coverage metrics",
-      "Customizable analysis parameters",
-      "Export and reporting tools"
-    ],
-    buttonText: "View Project"
   }
 ]; 
